@@ -1,4 +1,4 @@
-package org.xtext.example.awesomedsl;
+package org.xtext.example.awesomedsl.concretesyntax;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.AbstractRule;

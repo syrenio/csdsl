@@ -6,6 +6,9 @@ package org.xtext.example.awesomedsl;
 import org.eclipse.xtext.ui.editor.syntaxcoloring.AbstractAntlrTokenToAttributeIdMapper;
 import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightingConfiguration;
 import org.eclipse.xtext.ui.editor.syntaxcoloring.ISemanticHighlightingCalculator;
+import org.xtext.example.awesomedsl.concretesyntax.ExampleAntlrTokenToAttributeIdMapper;
+import org.xtext.example.awesomedsl.concretesyntax.ExampleHighlightingConfiguration;
+import org.xtext.example.awesomedsl.concretesyntax.ExampleSemanticHighlightingCalculator;
 
 import com.google.inject.Binder;
 

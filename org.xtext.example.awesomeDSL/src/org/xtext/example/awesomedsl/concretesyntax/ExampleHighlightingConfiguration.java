@@ -1,4 +1,4 @@
-package org.xtext.example.awesomedsl;
+package org.xtext.example.awesomedsl.concretesyntax;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.RGB;

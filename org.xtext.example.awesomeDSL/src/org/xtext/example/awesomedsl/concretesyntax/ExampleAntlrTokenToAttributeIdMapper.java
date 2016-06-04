@@ -1,4 +1,4 @@
-package org.xtext.example.awesomedsl;
+package org.xtext.example.awesomedsl.concretesyntax;
 
 import java.util.regex.Pattern;
 
