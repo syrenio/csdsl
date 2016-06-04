@@ -15,6 +15,7 @@ public class ExampleHighlightingConfiguration extends DefaultHighlightingConfigu
     public static final String METHOD_ID = "method";
     public static final String NUMBER_ID = "number";
     
+    public static final String MARKER_ID = "marker";
     public static final String HELLO_ID = "hello";
     public static final String GREEN_ID = "green";
     public static final String PINK_ID = "pink";
@@ -25,9 +26,10 @@ public class ExampleHighlightingConfiguration extends DefaultHighlightingConfigu
         acceptor.acceptDefaultHighlighting(KEYWORD_ID, "Keyword", keywordTextStyle());
         acceptor.acceptDefaultHighlighting(METHOD_ID, "Method", methodTextStyle());
         acceptor.acceptDefaultHighlighting(NUMBER_ID, "Number", numberTextStyle());
-        acceptor.acceptDefaultHighlighting(HELLO_ID, "Hello", keywordTextStyle());
+        //acceptor.acceptDefaultHighlighting(HELLO_ID, "Hello", keywordTextStyle());
         acceptor.acceptDefaultHighlighting(GREEN_ID, "Green", greenTextStyle());
         acceptor.acceptDefaultHighlighting(PINK_ID, "Pink", pinkTextStyle());
+        acceptor.acceptDefaultHighlighting(MARKER_ID, "Marker", markerTextStyle());
     }
 
     public TextStyle defaultTextStyle() {
@@ -51,6 +53,13 @@ public class ExampleHighlightingConfiguration extends DefaultHighlightingConfigu
         TextStyle textStyle = defaultTextStyle().copy();
         textStyle.setColor(new RGB(255,182,193));//127-255-0
         textStyle.setStyle(SWT.BOLD);
+        return textStyle;
+    }
+    
+    public TextStyle markerTextStyle() {
+        TextStyle textStyle = defaultTextStyle().copy();
+        textStyle.setColor(new RGB(0,0,255));//127-255-0
+        textStyle.setStyle(SWT.UNDERLINE_DOUBLE);
         return textStyle;
     }
     

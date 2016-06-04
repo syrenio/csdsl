@@ -17,6 +17,9 @@ public class ExampleAntlrTokenToAttributeIdMapper extends AbstractAntlrTokenToAt
         else if(tokenName.equals("RULE_STRING")){
         	return ExampleHighlightingConfiguration.GREEN_ID;
         }
+        else if(tokenName.contains("!")){
+        	return ExampleHighlightingConfiguration.MARKER_ID;
+        }
         else if(QUOTED.matcher(tokenName).matches()) {
             return ExampleHighlightingConfiguration.KEYWORD_ID;
         }
