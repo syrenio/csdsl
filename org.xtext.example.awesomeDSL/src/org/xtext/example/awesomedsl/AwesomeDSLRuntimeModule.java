@@ -5,6 +5,7 @@ package org.xtext.example.awesomedsl;
 
 import org.eclipse.xtext.ui.editor.syntaxcoloring.AbstractAntlrTokenToAttributeIdMapper;
 import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightingConfiguration;
+import org.eclipse.xtext.ui.editor.syntaxcoloring.ISemanticHighlightingCalculator;
 
 import com.google.inject.Binder;
 
@@ -19,6 +20,7 @@ public class AwesomeDSLRuntimeModule extends org.xtext.example.awesomedsl.Abstra
 		super.configure(binder);
 		binder.bind(IHighlightingConfiguration.class).to(ExampleHighlightingConfiguration.class);
 		binder.bind(AbstractAntlrTokenToAttributeIdMapper.class).to(ExampleAntlrTokenToAttributeIdMapper.class);
+		binder.bind(ISemanticHighlightingCalculator.class).to(ExampleSemanticHighlightingCalculator.class);
 	}
 	
 }

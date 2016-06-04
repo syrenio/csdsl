@@ -15,6 +15,7 @@ public class ExampleHighlightingConfiguration extends DefaultHighlightingConfigu
     public static final String NUMBER_ID = "number";
     public static final String HELLO_ID = "hello";
     public static final String GREEN_ID = "green";
+    public static final String PINK_ID = "pink";
 
     @Override
     public void configure(IHighlightingConfigurationAcceptor acceptor) {
@@ -23,7 +24,8 @@ public class ExampleHighlightingConfiguration extends DefaultHighlightingConfigu
         acceptor.acceptDefaultHighlighting(METHOD_ID, "Method", methodTextStyle());
         acceptor.acceptDefaultHighlighting(NUMBER_ID, "Number", numberTextStyle());
         acceptor.acceptDefaultHighlighting(HELLO_ID, "Hello", keywordTextStyle());
-        acceptor.acceptDefaultHighlighting(GREEN_ID, "Gello", greenTextStyle());
+        acceptor.acceptDefaultHighlighting(GREEN_ID, "Green", greenTextStyle());
+        acceptor.acceptDefaultHighlighting(PINK_ID, "Pink", pinkTextStyle());
     }
 
     public TextStyle defaultTextStyle() {
@@ -35,6 +37,13 @@ public class ExampleHighlightingConfiguration extends DefaultHighlightingConfigu
     public TextStyle greenTextStyle() {
         TextStyle textStyle = defaultTextStyle().copy();
         textStyle.setColor(new RGB(127, 255, 0));//127-255-0
+        textStyle.setStyle(SWT.BOLD);
+        return textStyle;
+    }
+    
+    public TextStyle pinkTextStyle() {
+        TextStyle textStyle = defaultTextStyle().copy();
+        textStyle.setColor(new RGB(255,182,193));//127-255-0
         textStyle.setStyle(SWT.BOLD);
         return textStyle;
     }
