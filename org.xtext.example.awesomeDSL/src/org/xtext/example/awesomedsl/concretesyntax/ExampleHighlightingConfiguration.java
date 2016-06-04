@@ -40,7 +40,7 @@ public class ExampleHighlightingConfiguration extends DefaultHighlightingConfigu
 
     public TextStyle greenTextStyle() {
         TextStyle textStyle = defaultTextStyle().copy();
-        textStyle.setColor(new RGB(127, 255, 0));//127-255-0
+        textStyle.setColor(new RGB(0, 102, 0));//127-255-0
         textStyle.setStyle(SWT.BOLD);
         FontData fd = new FontData();
         fd.setName("courier");
@@ -51,7 +51,7 @@ public class ExampleHighlightingConfiguration extends DefaultHighlightingConfigu
     
     public TextStyle pinkTextStyle() {
         TextStyle textStyle = defaultTextStyle().copy();
-        textStyle.setColor(new RGB(255,182,193));//127-255-0
+        textStyle.setColor(new RGB(202,0,204));//127-255-0
         textStyle.setStyle(SWT.BOLD);
         return textStyle;
     }
