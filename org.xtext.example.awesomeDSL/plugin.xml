@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://www.xtext.org/example/awesomedsl/AwesomeDSL" 
+       class = "org.xtext.example.awesomedsl.awesomeDSL.AwesomeDSLPackage"
+       genModel = "model/generated/AwesomeDSL.genmodel" /> 
+	
+  </extension>
+
+
+
+</plugin>

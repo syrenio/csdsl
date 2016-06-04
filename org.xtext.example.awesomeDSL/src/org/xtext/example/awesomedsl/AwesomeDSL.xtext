@@ -1,0 +1,13 @@
+grammar org.xtext.example.awesomedsl.AwesomeDSL with org.eclipse.xtext.common.Terminals
+
+generate awesomeDSL "http://www.xtext.org/example/awesomedsl/AwesomeDSL"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!' Something;
+	
+Something:
+	STRING
+;
