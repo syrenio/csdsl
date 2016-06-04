@@ -1,6 +1,7 @@
 package org.xtext.example.awesomedsl.concretesyntax;
 
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.xtext.ui.editor.syntaxcoloring.DefaultHighlightingConfiguration;
 import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightingConfiguration;
@@ -13,6 +14,7 @@ public class ExampleHighlightingConfiguration extends DefaultHighlightingConfigu
     public static final String KEYWORD_ID = "keyword";
     public static final String METHOD_ID = "method";
     public static final String NUMBER_ID = "number";
+    
     public static final String HELLO_ID = "hello";
     public static final String GREEN_ID = "green";
     public static final String PINK_ID = "pink";
@@ -38,6 +40,10 @@ public class ExampleHighlightingConfiguration extends DefaultHighlightingConfigu
         TextStyle textStyle = defaultTextStyle().copy();
         textStyle.setColor(new RGB(127, 255, 0));//127-255-0
         textStyle.setStyle(SWT.BOLD);
+        FontData fd = new FontData();
+        fd.setName("courier");
+        fd.setHeight(30);
+        textStyle.setFontData(fd);
         return textStyle;
     }
     

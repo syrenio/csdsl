@@ -21,6 +21,7 @@ public class AwesomeDSLRuntimeModule extends org.xtext.example.awesomedsl.Abstra
 	public void configure(Binder binder) {
 		// TODO Auto-generated method stub
 		super.configure(binder);
+		
 		binder.bind(IHighlightingConfiguration.class).to(ExampleHighlightingConfiguration.class);
 		binder.bind(AbstractAntlrTokenToAttributeIdMapper.class).to(ExampleAntlrTokenToAttributeIdMapper.class);
 		binder.bind(ISemanticHighlightingCalculator.class).to(ExampleSemanticHighlightingCalculator.class);
