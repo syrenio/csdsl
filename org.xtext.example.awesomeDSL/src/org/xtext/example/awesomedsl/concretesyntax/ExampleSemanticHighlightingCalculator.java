@@ -13,9 +13,11 @@ public class ExampleSemanticHighlightingCalculator implements ISemanticHighlight
 {
     @Override
     public void provideHighlightingFor(XtextResource resource, IHighlightedPositionAcceptor acceptor) {
+    	System.out.println("--------------");
         // It gets a node model.
         INode root = resource.getParseResult().getRootNode();
         for(INode node : root.getAsTreeIterable()) {   
+        	System.out.println(node);
             EObject grammarElement = node.getGrammarElement(); 
             if(grammarElement instanceof RuleCall) {
                 RuleCall rc = (RuleCall)grammarElement;
@@ -34,6 +36,10 @@ public class ExampleSemanticHighlightingCalculator implements ISemanticHighlight
                             acceptor.addPosition(node.getOffset(), node.getLength(), ExampleHighlightingConfiguration.GREEN_ID);
                         }else{
                         	acceptor.addPosition(node.getOffset(), node.getLength(), ExampleHighlightingConfiguration.PINK_ID);
+//                        	acceptor.addPosition(node.getOffset(), 1, ExampleHighlightingConfiguration.HELLO_ID);
+//                        	acceptor.addPosition(node.getOffset()+1, 2, ExampleHighlightingConfiguration.GREEN_ID);
+//                        	acceptor.addPosition(node.getOffset()+2, 3, ExampleHighlightingConfiguration.MARKER_ID);
+//                        	acceptor.addPosition(node.getOffset()+3, node.getLength() -3, ExampleHighlightingConfiguration.PINK_ID);
                         }
                     }
                 }
